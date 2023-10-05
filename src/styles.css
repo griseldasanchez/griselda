@@ -39,9 +39,6 @@ li a:hover {
 
 #details {
   background-color: #ECE8E4;
-  height: 10rem
-}
-
-.details-half {
-  width: 50%;
+  height: 10rem;
+  padding: 1%
 }

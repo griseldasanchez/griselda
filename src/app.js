@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import Tile from './tile';
+import Tiles from './tiles/tiles';
 
 // Styles
 import styles from './styles.css';
@@ -16,11 +16,10 @@ class App extends React.Component {
         </ul>
       </div>
       <div id="details">
-        Griselda's Website
+        Griselda's Website Details 
       </div>
       <div>
-        Tiles will go here
-        <Tile />
+        <Tiles />
       </div>
    </div> 
   }

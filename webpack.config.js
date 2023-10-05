@@ -29,10 +29,11 @@ module.exports = {
   devServer: {
     hot: true, // Enable Hot Module Replacement (HMR)
     open: true, // Open the default web browser when starting the server
+    port: 3000
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html"),
+      template: path.join(__dirname, "index.html"),
     }),
     new ReactRefreshPlugin(),
   ],

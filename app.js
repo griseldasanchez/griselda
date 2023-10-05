@@ -1,15 +1,24 @@
+const path = require('path');
 const express = require('express');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+
+
 const app = express();
+const compiler = webpack(webpackConfig);
 
-// Serve static files from the 'public' directory
-app.use(express.static('public'));
+app.use(webpackDevMiddleware(compiler, {
+  publicPath: webpackConfig.output.publicPath
+}));
 
-// Define a route to serve the index.html file
+app.use(webpackHotMiddleware(compiler));
+
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen(3000, () => {
+  console.log('Express server is listening on port 3000');
+})

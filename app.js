@@ -17,15 +17,15 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler));
 
 app.get(`${basename}/`, (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.get(`${basename}/food`, (req, res) => {
-  console.log('/food');
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.get(`${basename}/finance`, (req, res) => {
-  console.log('/finance');
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(3000, () => {

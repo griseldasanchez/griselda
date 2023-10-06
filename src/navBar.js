@@ -2,19 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles.css';
 
+const basename = '/griselda';
+
 const Navbar = () => {
   return (
     <div id="header">
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to={`${basename}/`}>Home</Link>
           </li>
           <li>
-            <Link to="/food">Food</Link>
+            <Link to={`${basename}/food`}>Food</Link>
           </li>
           <li>
-            <Link to="/finance">Finance</Link>
+            <Link to={`${basename}/finance`}>Finance</Link>
           </li>
         </ul>
       </nav>

@@ -5,9 +5,10 @@ const webpackConfig = require('./webpack.config.js');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 
-
 const app = express();
 const compiler = webpack(webpackConfig);
+
+const basename = '/griselda';
 
 app.use(webpackDevMiddleware(compiler, {
   publicPath: webpackConfig.output.publicPath
@@ -15,15 +16,15 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler));
 
-app.get('/', (req, res) => {
+app.get(`${basename}/`, (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/food', (req, res) => {
+app.get(`${basename}/food`, (req, res) => {
   console.log('/food');
 });
 
-app.get('/finance', (req, res) => {
+app.get(`${basename}/finance`, (req, res) => {
   console.log('/finance');
 });
 

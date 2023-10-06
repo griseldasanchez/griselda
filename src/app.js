@@ -8,15 +8,17 @@ import Finance from './finance';
 // Styles
 import styles from './styles.css';
 
+const basename = '/griselda';
+
 class App extends React.Component {
   render() {
     return <div>
-       <Router>
+       <Router basename={basename}>
         <NavBar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/food" component={Food} />
-          <Route path="/finance" component={Finance} />
+          <Route exact path={basename + '/'} component={Home} />
+          <Route path={basename + "/food"} component={Food} />
+          <Route path={basename + "/finance"} component={Finance} />
         </Switch>
       </Router>
    </div> 

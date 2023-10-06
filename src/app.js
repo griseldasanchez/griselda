@@ -19,7 +19,7 @@ class App extends React.Component {
         Griselda's Website
       </div>
       <div>
-        Tiles will go here
+        Tiles will go her:
         <Tile />
       </div>
    </div> 

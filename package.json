@@ -1,0 +1,22 @@
+{
+  "name": "griselda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/griseldasanchez/griselda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/griseldasanchez/griselda/issues"
+  },
+  "homepage": "https://github.com/griseldasanchez/griselda#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

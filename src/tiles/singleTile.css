@@ -1,0 +1,31 @@
+.single-tile {
+  max-width: 88%;
+  border: 2px solid orange;
+  padding: 6%;
+  align-content: center;
+  text-align: center;
+}
+
+.single-tile > div, .single-tile > img {
+  width: 100%;
+  padding: 1%;
+  overflow: hidden;
+}
+
+.tile-image {
+  border: 2px solid green;
+  width: 100%;
+}
+
+.tile-date {
+  border: 2px solid blue;
+}
+
+.tile-name {
+  border: 2px solid purple;
+  font-size: 1.75rem;
+}
+
+.tile-continue {
+  border: 2px solid red;
+}

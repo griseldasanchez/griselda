@@ -19,6 +19,14 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/food', (req, res) => {
+  console.log('/food');
+});
+
+app.get('/finance', (req, res) => {
+  console.log('/finance');
+});
+
 app.listen(3000, () => {
   console.log('Express server is listening on port 3000');
 })

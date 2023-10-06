@@ -1,0 +1,14 @@
+body {
+  
+}
+
+.tiles-wrapper {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.tiles-wrapper > div {
+  flex-grow: 1;
+  max-width: 33%
+}
